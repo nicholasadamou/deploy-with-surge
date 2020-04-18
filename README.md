@@ -19,7 +19,7 @@ npx surge token
 -	**SURGE_DOMAIN**: The domain you want to publish your site too.
 	- _For example_: `<domain-name-here>.surge.sh` or `<domain-name-here>.com`
 
-**3**. Add [`deployment.yml`](deployment.yml) to the `.github/workflows/deployment.yml` of your project.
+**3**. Add [`deployment.yml`](deployment.yml) to the `.github/workflows` directory contained at the root of your project.
 
 **4**. Test the workflow with a commit to the _master_ branch.
 
