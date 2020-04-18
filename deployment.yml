@@ -23,6 +23,5 @@ jobs:
       # Execute the steps required for continuous deployment
       - run: npx surge --project build/ --domain ${{ secrets.SURGE_DOMAIN }}
         env:
-          CI: true
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
