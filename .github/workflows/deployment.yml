@@ -1,0 +1,28 @@
+name: Deploy to Surge.sh
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploying to Surge.sh
+    runs-on: ubuntu-latest
+
+    steps:
+			# Installs and configures Node.js, so that way we can execute surge.sh for deployment
+      - uses: actions/checkout@v2
+      - name: Use Node.js and Deploy to Surge.sh
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      # Execute the steps required for continuous deployment
+      - run: npx surge --project build/ --domain ${{ secrets.SURGE_DOMAIN }}
+        env:
+          CI: true
+          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
