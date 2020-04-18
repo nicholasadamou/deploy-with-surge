@@ -1,7 +1,5 @@
 # Deploy with Surge.sh
 
-## Description
-
 A simple Github Actions template to deploy your static site using [Surge.sh](https://surge.sh).
 
 ## Steps
