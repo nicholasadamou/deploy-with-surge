@@ -25,7 +25,7 @@ npx surge token
 
 ## License
 
-© 2020 Nicholas Adamou.
+© Nicholas Adamou.
 
 It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
 
